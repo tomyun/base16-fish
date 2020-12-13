@@ -4,7 +4,7 @@
 ## Installation
 1. If you have [fisher](https://github.com/jorgebucaran/fisher),
 ```
-$ fisher add tomyun/base16-fish
+$ fisher install tomyun/base16-fish
 ```
 
 2. Run your choice of `base16-*` function

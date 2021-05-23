@@ -10,7 +10,7 @@ function base16-papercolor-light -d "PaperColor Light"
   set color04 d7/5f/00 # Base 0D - Blue
   set color05 00/5f/af # Base 0E - Magenta
   set color06 d7/5f/00 # Base 0C - Cyan
-  set color07 87/87/87 # Base 05 - White
+  set color07 44/44/44 # Base 05 - White
   set color08 5f/87/00 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
@@ -18,7 +18,7 @@ function base16-papercolor-light -d "PaperColor Light"
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 44/44/44 # Base 07 - Bright White
+  set color15 87/87/87 # Base 07 - Bright White
   set color16 d7/00/00 # Base 09
   set color17 00/5f/87 # Base 0F
   set color18 af/00/00 # Base 01
@@ -40,7 +40,7 @@ function base16-papercolor-light -d "PaperColor Light"
     function put_template_var; printf '\033P\033]%d;rgb:%s\007\033\\' $argv; end;
     function put_template_custom; printf '\033P\033]%s%s\007\033\\' $argv; end;
   else if string match 'linux*' $TERM # [ "${TERM%%-*}" = "linux" ]
-    function put_template; test $1 -lt 16 && printf "\e]P%x%s" $1 (echo $2 | sed 's/\///g'); end;
+    function put_template; test $argv[1] -lt 16 && printf "\e]P%x%s" $argv[1] (echo $argv[2] | sed 's/\///g'); end;
     function put_template_var; true; end;
     function put_template_custom; true; end;
   else
@@ -78,12 +78,12 @@ function base16-papercolor-light -d "PaperColor Light"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg 878787 # foreground
+    put_template_custom Pg 444444 # foreground
     put_template_custom Ph eeeeee # background
-    put_template_custom Pi 878787 # bold color
+    put_template_custom Pi 444444 # bold color
     put_template_custom Pj 008700 # selection color
-    put_template_custom Pk 878787 # selected text color
-    put_template_custom Pl 878787 # cursor
+    put_template_custom Pk 444444 # selected text color
+    put_template_custom Pl 444444 # cursor
     put_template_custom Pm eeeeee # cursor text
   else
     put_template_var 10 $colorfg

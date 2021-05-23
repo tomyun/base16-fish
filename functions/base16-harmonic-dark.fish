@@ -40,7 +40,7 @@ function base16-harmonic-dark -d "Harmonic16 Dark"
     function put_template_var; printf '\033P\033]%d;rgb:%s\007\033\\' $argv; end;
     function put_template_custom; printf '\033P\033]%s%s\007\033\\' $argv; end;
   else if string match 'linux*' $TERM # [ "${TERM%%-*}" = "linux" ]
-    function put_template; test $1 -lt 16 && printf "\e]P%x%s" $1 (echo $2 | sed 's/\///g'); end;
+    function put_template; test $argv[1] -lt 16 && printf "\e]P%x%s" $argv[1] (echo $argv[2] | sed 's/\///g'); end;
     function put_template_var; true; end;
     function put_template_custom; true; end;
   else

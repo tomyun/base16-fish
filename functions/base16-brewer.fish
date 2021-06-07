@@ -31,22 +31,22 @@ function base16-brewer -d "Brewer"
   if test -n "$TMUX"
     # Tell tmux to pass the escape sequences through
     # (Source: http://permalink.gmane.org/gmane.comp.terminal-emulators.tmux.user/1324)
-    function put_template; printf '\033Ptmux;\033\033]4;%d;rgb:%s\033\033\\\033\\' $argv; end;
-    function put_template_var; printf '\033Ptmux;\033\033]%d;rgb:%s\033\033\\\033\\' $argv; end;
-    function put_template_custom; printf '\033Ptmux;\033\033]%s%s\033\033\\\033\\' $argv; end;
+    function put_template; printf '\ePtmux;\e\e]4;%d;rgb:%s\e\e\\\e\\' $argv; end;
+    function put_template_var; printf '\ePtmux;\e\e]%d;rgb:%s\e\e\\\e\\' $argv; end;
+    function put_template_custom; printf '\ePtmux;\e\e]%s%s\e\e\\\e\\' $argv; end;
   else if string match 'screen*' $TERM # [ "${TERM%%[-.]*}" = "screen" ]
     # GNU screen (screen, screen-256color, screen-256color-bce)
-    function put_template; printf '\033P\033]4;%d;rgb:%s\007\033\\' $argv; end;
-    function put_template_var; printf '\033P\033]%d;rgb:%s\007\033\\' $argv; end;
-    function put_template_custom; printf '\033P\033]%s%s\007\033\\' $argv; end;
+    function put_template; printf '\eP\e]4;%d;rgb:%s\a\e\\' $argv; end;
+    function put_template_var; printf '\eP\e]%d;rgb:%s\a\e\\' $argv; end;
+    function put_template_custom; printf '\eP\e]%s%s\a\e\\' $argv; end;
   else if string match 'linux*' $TERM # [ "${TERM%%-*}" = "linux" ]
     function put_template; test $argv[1] -lt 16 && printf "\e]P%x%s" $argv[1] (echo $argv[2] | sed 's/\///g'); end;
     function put_template_var; true; end;
     function put_template_custom; true; end;
   else
-    function put_template; printf '\033]4;%d;rgb:%s\033\\' $argv; end;
-    function put_template_var; printf '\033]%d;rgb:%s\033\\' $argv; end;
-    function put_template_custom; printf '\033]%s%s\033\\' $argv; end;
+    function put_template; printf '\e]4;%d;rgb:%s\e\\' $argv; end;
+    function put_template_var; printf '\e]%d;rgb:%s\e\\' $argv; end;
+    function put_template_custom; printf '\e]%s%s\e\\' $argv; end;
   end
 
   # 16 color space

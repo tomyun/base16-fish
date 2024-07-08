@@ -111,7 +111,7 @@ function base16-pasque -d "Pasque"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param BEBCBF
+  set -U fish_color_param white
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
   set -U fish_color_search_match bryellow --background=3E2D5C

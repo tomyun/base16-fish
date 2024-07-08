@@ -111,7 +111,7 @@ function base16-flat -d "Flat"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param BDC3C7
+  set -U fish_color_param white
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
   set -U fish_color_search_match bryellow --background=7F8C8D

@@ -111,7 +111,7 @@ function base16-rose-pine-dawn -d "Rosé Pine Dawn"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param 6e6a86
+  set -U fish_color_param white
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
   set -U fish_color_search_match bryellow --background=f2e9de

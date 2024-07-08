@@ -111,7 +111,7 @@ function base16-atelier-cave -d "Atelier Cave"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param 7e7887
+  set -U fish_color_param white
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
   set -U fish_color_search_match bryellow --background=585260

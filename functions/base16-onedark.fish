@@ -97,35 +97,35 @@ function base16-onedark -d "OneDark"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion 3e4451
-  set -U fish_color_cancel -r
-  set -U fish_color_command green #white
-  set -U fish_color_comment 3e4451
-  set -U fish_color_cwd green
-  set -U fish_color_cwd_root red
-  set -U fish_color_end brblack #blue
-  set -U fish_color_error red
-  set -U fish_color_escape yellow #green
-  set -U fish_color_history_current --bold
-  set -U fish_color_host normal
-  set -U fish_color_match --background=brblue
-  set -U fish_color_normal normal
-  set -U fish_color_operator blue #green
-  set -U fish_color_param 565c64
-  set -U fish_color_quote yellow #brblack
-  set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=3e4451
-  set -U fish_color_selection white --bold --background=3e4451
-  set -U fish_color_status red
-  set -U fish_color_user brgreen
-  set -U fish_color_valid_path --underline
-  set -U fish_pager_color_completion normal
-  set -U fish_pager_color_description yellow --dim
-  set -U fish_pager_color_prefix white --bold #--underline
-  set -U fish_pager_color_progress brwhite --background=cyan
+  set -g fish_color_autosuggestion 3e4451
+  set -g fish_color_cancel -r
+  set -g fish_color_command green #white
+  set -g fish_color_comment 3e4451
+  set -g fish_color_cwd green
+  set -g fish_color_cwd_root red
+  set -g fish_color_end brblack #blue
+  set -g fish_color_error red
+  set -g fish_color_escape yellow #green
+  set -g fish_color_history_current --bold
+  set -g fish_color_host normal
+  set -g fish_color_match --background=brblue
+  set -g fish_color_normal normal
+  set -g fish_color_operator blue #green
+  set -g fish_color_param 565c64
+  set -g fish_color_quote yellow #brblack
+  set -g fish_color_redirection cyan
+  set -g fish_color_search_match bryellow --background=3e4451
+  set -g fish_color_selection white --bold --background=3e4451
+  set -g fish_color_status red
+  set -g fish_color_user brgreen
+  set -g fish_color_valid_path --underline
+  set -g fish_pager_color_completion normal
+  set -g fish_pager_color_description yellow --dim
+  set -g fish_pager_color_prefix white --bold #--underline
+  set -g fish_pager_color_progress brwhite --background=cyan
 
   # remember current theme
-  set -U base16_theme onedark
+  set -g base16_theme onedark
 
   # clean up
   functions -e put_template put_template_var put_template_custom
